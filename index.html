@@ -4,36 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <p id="game-status" data-testid="gameStatus">
-          Game Status: <span>Correct ✅</span>
+    <div class="game-container">
+      <header class="header">
+        <p class="game-status" data-testid="gameStatus">
+          Game Status: <br />
+          <span>Correct ✅</span>
         </p>
-        <p id="score" data-testid="score">Score: <span>3</span></p>
+        <p data-testid="score" class="score">
+          Score: <span id="scoreValue">3</span>
+        </p>
       </header>
 
       <section class="game-area">
-        <div class="guess-box">
-          <div class="color" id="color-box" data-testid="colorBox">?</div>
-        </div>
-        <p class="instruction" data-testid="gameInstructions">
-          Guess the correct Color 🤪
-        </p>
+        <div class="guess-box">?</div>
+        <p class="instruction">Can You Guess the correct Color?</p>
 
         <div class="color-options" data-testid="colorOptions">
-          <div class="color-box" data-color="red">Red</div>
-          <div class="color-box" data-color="blue">Blue</div>
-          <div class="color-box" data-color="green">Green</div>
-          <div class="color-box" data-color="pink">Pink</div>
-          <div class="color-box" data-color="orange">Orange</div>
-          <div class="color-box" data-color="purple">Purple</div>
+          <button class="red" data-color="red"></button>
+          <button class="pink" data-color="pink"></button>
+          <button class="purple" data-color="purple"></button>
+          <button class="green" data-color="green"></button>
+          <button class="orange" data-color="orange"></button>
+          <button class="blue" data-color="blue"></button>
         </div>
-      </section>
 
-      <button id="new-game-btn" data-testid="newGameButton">New Game</button>
+        <button id="new-game-btn" data-testid="newGameButton" class="reset-btn">
+          New Game
+        </button>
+
+        <p class="game-instructions" data-testid="gameInstructions">
+          Click on the color options to guess the correct color. The game ends
+          when you guess six times correctly or when you click the "New Game"
+          button.
+        </p>
+      </section>
     </div>
+    ,
   </body>
 </html>
