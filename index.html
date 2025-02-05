@@ -15,39 +15,32 @@
   <body>
     <div class="game-container">
       <header class="header">
-        <p class="game-status" data-testid="gameStatus">
-          Game Status: <br />
-          <span>Correct ✅</span>
+        <p class="game-instructions" data-testid="gameInstructions">
+          Match the correct Color!
         </p>
+        <p class="game-status" data-testid="gameStatus"></p>
         <p data-testid="score" class="score">
-          Score: <span id="scoreValue">3</span>
+          Score: <span id="scoreValue">0</span>
         </p>
       </header>
 
       <section class="game-area">
-        <div class="guess-box">?</div>
-        <p class="instruction">Can You Guess the correct Color?</p>
+        <div class="guess-box" data-testid="coloBox"></div>
 
         <div class="color-options" data-testid="colorOptions">
-          <button class="red" data-color="red"></button>
-          <button class="pink" data-color="pink"></button>
-          <button class="purple" data-color="purple"></button>
-          <button class="green" data-color="green"></button>
-          <button class="orange" data-color="orange"></button>
-          <button class="blue" data-color="blue"></button>
+          <button class="color-btn red" data-color="red"></button>
+          <button class="color-btn pink" data-color="pink"></button>
+          <button class="color-btn purple" data-color="purple"></button>
+          <button class="color-btn green" data-color="green"></button>
+          <button class="color-btn orange" data-color="orange"></button>
+          <button class="color-btn blue" data-color="blue"></button>
         </div>
 
         <button id="new-game-btn" data-testid="newGameButton" class="reset-btn">
           New Game
         </button>
-
-        <p class="game-instructions" data-testid="gameInstructions">
-          Click on the color options to guess the correct color. The game ends
-          when you guess six times correctly or when you click the "New Game"
-          button.
-        </p>
       </section>
     </div>
-    ,
+    <script src="src/app.js"></script>
   </body>
 </html>
